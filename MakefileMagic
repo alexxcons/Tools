@@ -1,0 +1,8 @@
+
+
+# configure.ac.in - Change compiler strictnes --> dont use -WError any more: 
+-m4_define([xfce4_settings_debug_default], [ifelse(xfce4_settings_version_tag(), [git], [full], [minimum])])
++m4_define([xfce4_settings_debug_default], [ifelse(xfce4_settings_version_tag(), [git], [yes], [minimum])])
+
+temporary ignore -Werror:
+./autogen.sh --disable-debug
